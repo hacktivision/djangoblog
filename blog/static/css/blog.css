@@ -1,6 +1,7 @@
 html, 
 body{
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 *{
     margin: 0;
@@ -9,6 +10,7 @@ body{
 }
 h1, h2, h3, h4 {
     margin-bottom: 0.75em;
+    line-height: 1.2;
 }
 p {
     margin-bottom: 0.5em;
@@ -58,7 +60,7 @@ p {
 }
 
 .more-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 40px;

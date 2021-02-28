@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.utils import timezone
 
 from .models import Post
 
-def posts_list(request):
+def post_list(request):
     posts = Post.objects.filter(published_date__lt=timezone.now()).order_by('published_date')
     context = {
         'title': 'My posts',
@@ -14,11 +14,10 @@ def posts_list(request):
     }
     return render(request, 'blog/posts.html', context=context)
 
-def post_detail(request, post_id):
-    post = Post.objects.get(pk=post_id)
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
     context = {
-        'title': post.title,
-        'text': posts.text,
+        'post': post,
     }
     return render(request, 'blog/post_detail.html', context=context)
     
