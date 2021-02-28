@@ -23,6 +23,7 @@ p {
     align-items: center;
     justify-content: flex-start;
     min-height: 180px;
+    padding: 1.5em 0;
     background-color: #f9f9f9;
     margin-bottom: 5em;
 }
@@ -31,6 +32,10 @@ p {
     max-width: 1600px;
     padding: 0 40px;
     flex: 1;
+}
+
+.container.container--md {
+    max-width: 1000px;
 }
 .grid {
     display: flex;
