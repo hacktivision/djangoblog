@@ -1,0 +1,24 @@
+{% extends 'blog/base.html' %}
+
+ 
+{% block title %}{{ title }}{% endblock title %}
+{% block header %}
+    <div class="hero">
+        <div class="container container--md">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <div class="container container--md">
+        <form action="POST">
+            {% csrf_token %}
+            <div class="post-body">{{ form.as_p  }}</div>
+            <button type="submit" class="more-button">Сохранить</button>
+        </form>
+    </div>
+{% endblock content %}
+
+
+

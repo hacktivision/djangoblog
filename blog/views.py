@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 from .models import Post
+from .forms import PostForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lt=timezone.now()).order_by('published_date')
@@ -20,5 +21,14 @@ def post_detail(request, pk):
         'post': post,
     }
     return render(request, 'blog/post_detail.html', context=context)
+
+
+def post_new(request):
+    form = PostForm()
+    context = {
+        'title': 'Добовление поста',
+        'form': form,
+    }
+    return render(request, 'blog/post_new.html', context=context)
     
     

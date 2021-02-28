@@ -18,6 +18,21 @@ p {
 .layuot {
 
 }
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .hero {
     display: flex;
     align-items: center;
@@ -75,8 +90,10 @@ p {
     background-color: #f4f4f4;
     color: #787878;
     text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border: 0;
     text-transform: uppercase;
-    transition: all 0.2s;
 }
 
 .more-button:hover {
@@ -87,4 +104,35 @@ p {
 .post-body{
     flex: 1;
     padding-bottom: 20px;
+}
+
+/* Forms */
+[type*="text"],
+[type*="email"],
+[type*="password"],
+[type*="phone"]{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 1.25em;
+    font-size: 100%;
+    border: 1px solid #ccc;
+    min-width: 340px;
+}
+[type*="text"]:focus,
+[type*="email"]:focus,
+[type*="password"]:focus,
+[type*="phone"]:focus {
+    border: 1px solid #999;
+    outline: none;
+}
+textarea {
+    display: flex;
+    min-width: 340px;
+    padding: 1.25em;
+    border: 1px solid #ccc;
+}
+textarea:focus {
+    border: 1px solid #999;
+    outline: none;
 }
