@@ -117,7 +117,8 @@ p {
     padding: 0 1.25em;
     font-size: 100%;
     border: 1px solid #ccc;
-    min-width: 340px;
+    min-width: 100%;
+    width: 100%;
 }
 [type*="text"]:focus,
 [type*="email"]:focus,
@@ -128,11 +129,18 @@ p {
 }
 textarea {
     display: flex;
-    min-width: 340px;
+    min-width: 100%;
+    width: 100%;
     padding: 1.25em;
     border: 1px solid #ccc;
 }
 textarea:focus {
     border: 1px solid #999;
     outline: none;
+}
+
+.is-expanded {
+    min-width: 100%;
+    min-width: 100%;
+    width: 100%;
 }

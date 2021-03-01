@@ -12,7 +12,7 @@
 
 {% block content %}
     <div class="container container--md">
-        <form action="POST">
+        <form method="POST">
             {% csrf_token %}
             <div class="post-body">{{ form.as_p  }}</div>
             <button type="submit" class="more-button">Сохранить</button>
